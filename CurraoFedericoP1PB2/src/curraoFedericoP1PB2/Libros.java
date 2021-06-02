@@ -8,15 +8,15 @@ public class Libros extends Biblioteca{
 	private Integer codigo;
 	private String nombre;
 	private String autor;
-	private TipoDeLibro TipoDeLibro;
+
 	
 	
 
-	public Libros (Integer codigo, String nombre, String autor, TipoDeLibro TipoDeLibro) {
+	public Libros (Integer codigo, String nombre, String autor) {
 		this.codigo=codigo;
 		this.nombre=nombre;
 		this.autor=autor;
-		this.TipoDeLibro=TipoDeLibro;
+		
 		
 		
 		
@@ -62,13 +62,6 @@ public class Libros extends Biblioteca{
 		this.autor = autor;
 	}
 
-	public TipoDeLibro getTipoDeLibro() {
-		return TipoDeLibro;
-	}
-
-	public void setTipoDeLibro(TipoDeLibro tipoDeLibro) {
-		TipoDeLibro = tipoDeLibro;
-	}
 	
 	
 	

@@ -11,7 +11,7 @@ public class TestBiblioteca {
 	@Test
 	public void queSiLibroEstaPrestadoNoEsteDisponible() {
 		Biblioteca unlam = new Biblioteca();
-		Libros patagonia = new Libros (010, "Patagonia", "National geographic", TipoDeLibro.GEOGRAFIA);
+		Geografia patagonia = new Geografia (010, "Patagonia", "National geographic");
 		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
 		
 
@@ -26,7 +26,7 @@ public class TestBiblioteca {
 	@Test
 	public void cuandoDevuelvoLibroQueQuedeDisponible() {
 		Biblioteca unlam = new Biblioteca();
-		Libros patagonia = new Libros (010, "Patagonia", "National geographic", TipoDeLibro.GEOGRAFIA);
+		Geografia patagonia = new Geografia (010, "Patagonia", "National geographic");
 		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
 		
 		patagonia.prestarunlibroAalumno(federico);
@@ -39,9 +39,9 @@ public class TestBiblioteca {
 	@Test
 	public void queComoMaximoSePrestenDos() {
 		Biblioteca unlam = new Biblioteca();
-		Libros patagonia = new Libros (010, "Patagonia", "National geographic", TipoDeLibro.GEOGRAFIA);
-		Libros historiasargentinas = new Libros (010, "historiasargentinas", "pigna", TipoDeLibro.HISTORIA);
-		Libros dosmasdos = new Libros (010, "dosmasdos", "einstein", TipoDeLibro.MATEMATICA);
+		Geografia patagonia = new Geografia (010, "Patagonia", "National geographic");
+		Historia historiasargentinas = new Historia (010, "historiasargentinas", "pigna");
+		Matematica dosmasdos = new Matematica (010, "dosmasdos", "einstein");
 		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
 		
 		patagonia.prestarunlibroAalumno(federico);
@@ -53,12 +53,25 @@ public class TestBiblioteca {
 		
 	}
 	
+	@Test 
+	public void librosQueseanFotocopiables() {
+		Biblioteca unlam = new Biblioteca();
+		Historia historiasargentinas = new Historia (010, "historiasargentinas", "pigna");
+		Matematica dosmasdos = new Matematica (010, "dosmasdos", "einstein");
+		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
+		
+		
+		patag
+		
+	}
+	
+	
 	@Test
 	public void registroDeLosPrestamos() {
 		Biblioteca unlam = new Biblioteca();
-		Libros patagonia = new Libros (010, "Patagonia", "National geographic", TipoDeLibro.GEOGRAFIA);
-		Libros historiasargentinas = new Libros (010, "historiasargentinas", "pigna", TipoDeLibro.HISTORIA);
-		Libros dosmasdos = new Libros (010, "dosmasdos", "einstein", TipoDeLibro.MATEMATICA);
+		Geografia patagonia = new Geografia (010, "Patagonia", "National geographic");
+		Historia historiasargentinas = new Historia (010, "historiasargentinas", "pigna");
+		Matematica dosmasdos = new Matematica (010, "dosmasdos", "einstein");
 		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
 		Estudiantes lucas = new Estudiantes("32.322.633", "Campos", "Lucas");
 		
