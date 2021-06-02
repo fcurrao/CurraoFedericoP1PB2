@@ -97,7 +97,7 @@ public class TestBiblioteca {
 		patagonia.prestarunlibroAalumno(lucas);
 		historiasargentinas.prestarunlibroAalumno(federico);
 		
-		assertEquals(3, unlam.registroDePrestamos());
+		assertEquals((Integer)3, unlam.registroDePrestamos());
 		
 	}
 	

@@ -58,7 +58,7 @@ public class Biblioteca {
 	
 	
 	public Object registroDePrestamos() {
-		return prestados.size();
+		return this.prestados.size();
 	}
 	
 	
