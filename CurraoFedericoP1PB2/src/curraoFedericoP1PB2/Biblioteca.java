@@ -4,24 +4,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Biblioteca {
-
 	private List<Libros> prestados;
+	private Integer contador = 0;
 
 	public Biblioteca() {
 		this.prestados = new ArrayList<>();
 
 	}
+	
 
-	/*
-	 * public boolean siEstaDisponible(Libros libroAVerificar) { boolean disponible=
-	 * false; for (Libros libro: this.prestados) {
-	 * if(libro.getCodigo().equals(libroAVerificar.getCodigo())) { disponible =
-	 * Boolean.FALSE; } else disponible = Boolean.TRUE;
-	 * 
-	 * 
-	 * } return disponible; }
-	 */
+	
+	
+	
+	
+	
+	public Estudiantes prestarunlibroAalumno(Estudiantes estudiante) {
+		
+		for (Libros libro: this.prestados)	{
+			if(libro.estaDisponible(libro) == true) {
+				if(estudiante.getCantidadPrestados()<2) {
+				contador++;	
+				estudiante.setCantidadPrestados(contador);	
+				
+				prestados.add(libro);
+				}
+			} 
+			
+			
+		}	return estudiante;
+	}
+	
+	
+		
+	
+	
 
+	
 	public boolean estaDisponible(Libros libroAVerificar) {
 		boolean disponible = false;
 		for (Libros libro : this.prestados) {
@@ -36,39 +54,63 @@ public class Biblioteca {
 	}
 
 	
-	public Estudiantes prestarunlibroAalumno(Libros libroAprestar, Estudiantes estudiante) {
-		for (Libros libro: this.prestados)	{
-			if(libro.estaDisponible(libroAprestar) == true) {
-				
-				prestados.add(libroAprestar);
-			
-			} 
-			
-			
-		}	return estudiante;
+	
+	
+	
+	public Object registroDePrestamos() {
+		return prestados.size();
 	}
 	
 	
 	
-		
 	public void devolverUnLibro(Libros libroADevolver) {
 		prestados.remove(libroADevolver);
 		
 	}
-		
-	public void registroDePrestamos() {
-		prestados.size();
-	}
 	
-		
-		
 	
-	public List<Libros> getPrestados() {
-		return prestados;
-	}
+	
+	
+	
 
-	public void setPrestados(List<Libros> prestados) {
-		this.prestados = prestados;
-	}
+	
+public List<Libros> getPrestados() {
+	return prestados;
+}
+
+public void setPrestados(List<Libros> prestados) {
+	this.prestados = prestados;
+}
+
+
+
+
+
+
+
+public Integer getContador() {
+	return contador;
+}
+
+
+
+
+
+
+
+public void setContador(Integer contador) {
+	this.contador = contador;
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
 
 }

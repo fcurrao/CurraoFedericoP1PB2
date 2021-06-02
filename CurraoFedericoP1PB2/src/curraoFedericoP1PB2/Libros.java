@@ -1,11 +1,16 @@
 package curraoFedericoP1PB2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Libros extends Biblioteca{
 
 	private Integer codigo;
 	private String nombre;
 	private String autor;
 	private TipoDeLibro TipoDeLibro;
+	
+	
 
 	public Libros (Integer codigo, String nombre, String autor, TipoDeLibro TipoDeLibro) {
 		this.codigo=codigo;
@@ -17,6 +22,22 @@ public class Libros extends Biblioteca{
 		
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		
+
+	
+	
+	
 	public Integer getCodigo() {
 		return codigo;
 	}
@@ -48,7 +69,6 @@ public class Libros extends Biblioteca{
 	public void setTipoDeLibro(TipoDeLibro tipoDeLibro) {
 		TipoDeLibro = tipoDeLibro;
 	}
-	
 	
 	
 	
