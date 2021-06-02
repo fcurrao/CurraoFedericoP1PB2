@@ -7,10 +7,9 @@ public class Geografia extends Libros   implements Fotocopiables {
 		// TODO Auto-generated constructor stub
 	}
 	@Override
-	public void fotocopiables() {
+	public boolean fotocopiables() {
 		// TODO Auto-generated method stub
 		
 	}
-{
 
 }

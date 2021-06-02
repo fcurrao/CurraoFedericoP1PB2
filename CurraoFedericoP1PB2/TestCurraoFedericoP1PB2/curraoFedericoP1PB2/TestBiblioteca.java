@@ -3,7 +3,6 @@ package curraoFedericoP1PB2;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-
 import org.junit.Test;
 
 public class TestBiblioteca {
@@ -60,8 +59,8 @@ public class TestBiblioteca {
 		Matematica dosmasdos = new Matematica (010, "dosmasdos", "einstein");
 		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
 		
+		assertTrue(historiasargentinas.fotocopiables());
 		
-		patag
 		
 	}
 	

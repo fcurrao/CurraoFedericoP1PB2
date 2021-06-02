@@ -8,8 +8,8 @@ public class Historia extends Libros implements Fotocopiables {
 	}
 
 	@Override
-	public void fotocopiables() {
-		// TODO Auto-generated method stub
+	public boolean fotocopiables() {
+		return true;
 		
 	}
 
