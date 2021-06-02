@@ -18,7 +18,7 @@ public class Biblioteca {
 	
 	
 	
-	public Estudiantes prestarunlibroAalumno(Estudiantes estudiante) {
+	public void prestarunlibroAalumno(Libros libros, Estudiantes estudiante) {
 		
 		for (Libros libro: this.prestados)	{
 			if(libro.estaDisponible(libro) == true) {
@@ -31,8 +31,8 @@ public class Biblioteca {
 			} 
 			
 			
-		}	return estudiante;
-	}
+		}	
+		}
 	
 	
 		

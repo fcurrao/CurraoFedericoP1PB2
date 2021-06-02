@@ -14,7 +14,7 @@ public class TestBiblioteca {
 		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
 		
 
-		patagonia.prestarunlibroAalumno(federico);
+		unlam.prestarunlibroAalumno(patagonia, federico);
 		
 		
 		assertEquals(false, patagonia.estaDisponible(patagonia));
@@ -38,8 +38,8 @@ public class TestBiblioteca {
 		Geografia patagonia = new Geografia (010, "Patagonia", "National geographic");
 		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
 		
-		patagonia.prestarunlibroAalumno(federico);
-		patagonia.devolverUnLibro(patagonia);
+		unlam.prestarunlibroAalumno(patagonia, federico);
+		unlam.devolverUnLibro(patagonia);
 		
 		assertTrue(patagonia.estaDisponible(patagonia));
 	
@@ -53,9 +53,9 @@ public class TestBiblioteca {
 		Matematica dosmasdos = new Matematica (020, "dosmasdos", "einstein");
 		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
 		
-		patagonia.prestarunlibroAalumno(federico);
-		historiasargentinas.prestarunlibroAalumno(federico);
-		dosmasdos.prestarunlibroAalumno(federico);
+		unlam.prestarunlibroAalumno(dosmasdos, federico);
+		unlam.prestarunlibroAalumno(historiasargentinas, federico);
+		unlam.prestarunlibroAalumno(patagonia, federico);
 		
 		assertEquals((Integer)2, federico.getCantidadPrestados());
 		
@@ -93,9 +93,9 @@ public class TestBiblioteca {
 		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
 		Estudiantes lucas = new Estudiantes("32.322.633", "Campos", "Lucas");
 		
-		dosmasdos.prestarunlibroAalumno(federico);
-		patagonia.prestarunlibroAalumno(lucas);
-		historiasargentinas.prestarunlibroAalumno(federico);
+		unlam.prestarunlibroAalumno(dosmasdos, federico);
+		unlam.prestarunlibroAalumno(historiasargentinas, federico);
+		unlam.prestarunlibroAalumno(patagonia, federico);
 		
 		assertEquals((Integer)3, unlam.registroDePrestamos());
 		
