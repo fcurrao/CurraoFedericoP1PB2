@@ -8,8 +8,8 @@ public class Geografia extends Libros   implements Fotocopiables {
 	}
 	@Override
 	public boolean fotocopiables() {
-		// TODO Auto-generated method stub
-		
+		return true;
+				
 	}
 
 }

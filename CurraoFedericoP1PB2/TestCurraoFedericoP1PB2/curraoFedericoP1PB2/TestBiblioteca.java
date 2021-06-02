@@ -21,6 +21,16 @@ public class TestBiblioteca {
 		
 	}
 	
+	@Test
+	public void queSeCreaUnLibro() {
+		Biblioteca unlam = new Biblioteca();
+		Geografia patagonia = new Geografia (010, "Patagonia", "National geographic");
+		
+		
+		assertEquals((Integer)010, patagonia.getCodigo());
+		
+	}
+	
 	
 	@Test
 	public void cuandoDevuelvoLibroQueQuedeDisponible() {
@@ -40,7 +50,7 @@ public class TestBiblioteca {
 		Biblioteca unlam = new Biblioteca();
 		Geografia patagonia = new Geografia (010, "Patagonia", "National geographic");
 		Historia historiasargentinas = new Historia (010, "historiasargentinas", "pigna");
-		Matematica dosmasdos = new Matematica (010, "dosmasdos", "einstein");
+		Matematica dosmasdos = new Matematica (020, "dosmasdos", "einstein");
 		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
 		
 		patagonia.prestarunlibroAalumno(federico);
@@ -56,7 +66,7 @@ public class TestBiblioteca {
 	public void librosQueseanFotocopiables() {
 		Biblioteca unlam = new Biblioteca();
 		Historia historiasargentinas = new Historia (010, "historiasargentinas", "pigna");
-		Matematica dosmasdos = new Matematica (010, "dosmasdos", "einstein");
+		Matematica dosmasdos = new Matematica (020, "dosmasdos", "einstein");
 		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
 		
 		assertTrue(historiasargentinas.fotocopiables());
@@ -65,12 +75,21 @@ public class TestBiblioteca {
 	}
 	
 	
+	@Test 
+	public void quesepuedaCrearUnEstudiante() {
+		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
+		
+		assertEquals("35.347.676",federico.getDni());
+		
+	}
+	
+	
 	@Test
 	public void registroDeLosPrestamos() {
 		Biblioteca unlam = new Biblioteca();
 		Geografia patagonia = new Geografia (010, "Patagonia", "National geographic");
-		Historia historiasargentinas = new Historia (010, "historiasargentinas", "pigna");
-		Matematica dosmasdos = new Matematica (010, "dosmasdos", "einstein");
+		Historia historiasargentinas = new Historia (020, "historiasargentinas", "pigna");
+		Matematica dosmasdos = new Matematica (030, "dosmasdos", "einstein");
 		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
 		Estudiantes lucas = new Estudiantes("32.322.633", "Campos", "Lucas");
 		
@@ -84,13 +103,6 @@ public class TestBiblioteca {
 	
 	
 	
-	@Test 
-	public void quesepuedaCrearUnEstudiante() {
-		Estudiantes federico = new Estudiantes("35.347.676", "Currao", "Federico");
-		
-		assertEquals("35.347.676",federico.getDni());
-		
-	}
 	
 	
 	
